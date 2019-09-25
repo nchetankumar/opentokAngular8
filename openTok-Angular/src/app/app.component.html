@@ -1,0 +1,20 @@
+<div class="conferenceApp">
+  <h1 class="text-center">{{title}}</h1>
+  <div class="d-flex flex-wrap flex-column loginPage" *ngIf="!showVideoPage">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Your Name" [(ngModel)]="userName">
+      <mat-error *ngIf="!userName">Please enter name</mat-error>
+    </mat-form-field>
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedOption">
+      <mat-radio-button value="Subscriber">Subscriber</mat-radio-button>
+      <mat-radio-button value="Moderator">Moderator</mat-radio-button>
+    </mat-radio-group>
+    <button mat-button color="primary" *ngIf="userName" (click)="joinRoom()">Join Room</button>
+  </div>
+  <div *ngIf="session && showVideoPage" class="d-flex flex-wrap flex-row justify-content-between">
+    <app-publisher [session]="session" [userInfo]="userInfo"></app-publisher>
+    <div class="d-flex flex-wrap flex-column p-4 publisherUser">
+      <app-subscriber *ngFor="let stream of streams" [stream]="stream" [session]="session"></app-subscriber>
+    </div>    
+  </div>
+</div>

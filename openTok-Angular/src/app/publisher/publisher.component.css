@@ -1,0 +1,73 @@
+.controls{
+    border-radius: 20%;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+.active{
+    background-image: url('./../../../assets/images/conference/active-circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.alignDiv{
+    align-items: center;
+}
+.inActive{
+    background-image: url('./../../../assets/images/conference/inactive-circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.red-circle{
+    background-image: url('./../../../assets/images/conference/red-circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.controlsContainer{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-image: url('./../../../assets/images/conference/call-controls-bg.svg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+#test:hover .controlsContainer {
+    display: flex;
+    transition: all .2s ease-in-out;
+}
+.controlsTxt{
+    font-size: 15px;
+    font-family: avenir;
+    color: #ffffff;
+}
+#publisher {
+    position: absolute;
+    width: 360px;
+    height: 240px;
+    bottom: 10px;
+    left: 10px;
+    z-index: 100;
+    border: 3px solid white;
+    border-radius: 3px;
+}
+#videos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#screenShareDiv{
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+}
