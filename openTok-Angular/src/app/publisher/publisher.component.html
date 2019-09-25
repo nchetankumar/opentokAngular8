@@ -5,47 +5,23 @@
     <!-- <div id="screens"></div> -->
     <!-- <div [ngClass]="{'d-none': showShare}" #screenPreview></div> -->
     <div class="flex-row justify-content-center p-4 controlsContainer">
-        <div *ngIf="!showAudio" class="p-2 d-flex flex-column alignDiv" (click)="disableAudio()"> 
-            <span class="active">
-                <img class="controls" src="./../../../assets/images/conference/mic.svg" alt="Enable Audio">
-            </span>                
-            <span class="controlsTxt">Your Mic</span>
+        <div *ngIf="!showAudio" class="p-2 d-flex flex-column alignDiv" (click)="disableAudio()">                           
+            <span class="controlsTxt">Mute</span>
         </div>
-        <div *ngIf="showAudio" class="p-2 d-flex flex-column alignDiv" (click)="enableAudio()">
-            <span class="inActive">
-                <img class="controls" src="./../../../assets/images/conference/mic-muted.svg" alt="Disable Audio"> 
-            </span>      
-            <span class="controlsTxt">Your Mic</span>
+        <div *ngIf="showAudio" class="p-2 d-flex flex-column alignDiv" (click)="enableAudio()">                 
+            <span class="controlsTxt">Un Mute</span>
         </div>
-        <div *ngIf="showVideo && session" class="p-2 d-flex flex-column alignDiv" (click)="enableVideo()" > 
-            <span class="inActive">
-                <img class="controls" src="./../../../assets/images/conference/no_video.svg" alt="Enable Video">
-            </span>
-            <span class="controlsTxt">Your Video</span>
+        <div *ngIf="showVideo && session" class="p-2 d-flex flex-column alignDiv" (click)="enableVideo()" >            
+            <span class="controlsTxt">Enable Video</span>
         </div>
         <div *ngIf="!showVideo && session" class="p-2 d-flex flex-column alignDiv" (click)="hideVideo()">
-            <span class="active">
-                <img class="controls" src="./../../../assets/images/conference/video-icon.svg" alt="Disable Video">
-            </span>
-            <span class="controlsTxt">Your Video</span>
+            <span class="controlsTxt">Disable Video</span>
         </div>
         <div *ngIf="showShare && session" 
         class="p-2 d-flex flex-column alignDiv" (click)="enableSharing()">
-            <span class="inActive">
-                <img class="controls" src="./../../../assets/images/conference/screenshare.svg" alt="Share Screen">
-            </span>
             <span class="controlsTxt">Share Screen</span>
         </div>
-        <!-- <div *ngIf="!showShare && session" class="p-2" (click)="hideSharing()">
-            <span class="active">
-                <img class="controls" src="./../../../assets/images/conference/stopShare.png" alt="Share Screen">
-            </span>
-            <span class="controlsTxt">Share Screen</span>
-        </div> -->
-        <div (click) = "closeMeeting()" class="p-2 d-flex flex-column alignDiv">
-            <span class="red-circle">
-                <img class="controls" src="./../../../assets/images/conference/hang-up.svg" alt="Leave Call">
-            </span>
+        <div (click) = "closeMeeting()" class="p-2 d-flex flex-column alignDiv">            
             <span class="controlsTxt">Leave Call</span>
         </div>
     </div>

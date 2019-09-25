@@ -6,7 +6,6 @@
     cursor: pointer;
 }
 .active{
-    background-image: url('./../../../assets/images/conference/active-circle.svg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 50px;
@@ -16,14 +15,12 @@
     align-items: center;
 }
 .inActive{
-    background-image: url('./../../../assets/images/conference/inactive-circle.svg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 50px;
     width: 50px;
 }
 .red-circle{
-    background-image: url('./../../../assets/images/conference/red-circle.svg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 50px;
@@ -33,7 +30,6 @@
     position: absolute;
     bottom: 0;
     z-index: 2;
-    background-image: url('./../../../assets/images/conference/call-controls-bg.svg');
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
